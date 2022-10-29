@@ -2,7 +2,7 @@ var deadline = new Date("dec 31, 2022 24:00:00").getTime();
 var x = setInterval(function () {
     var now = new Date().getTime();
     var t = deadline - now;
-    console.log(t);
+    // console.log(t);
     var days = Math.floor(t / (1000 * 60 * 60 * 24));
     var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
@@ -19,3 +19,11 @@ var x = setInterval(function () {
         document.getElementById("second").innerHTML = '00';
     }
 }, 1000);
+
+var HeroSection = document.getElementById("heroSection");
+var iconList = document.getElementById("icons")
+if (window.innerWidth <= 360) {
+    // console.log(HeroSection);
+    // console.log(iconList);
+    HeroSection.appendChild(iconList);
+}
