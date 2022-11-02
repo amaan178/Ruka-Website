@@ -27,109 +27,118 @@ body {
     line-height: 1.5;
 }
 
-.brand-logo {
-    width: 115px;
-    height: 37px;
-    margin-top: 20px;
+/* TO MAKE WEBSITE RESPONSIVE CODE */
+/* 1. For Laptops/Desktops */
+@media (min-width: 992px) {
+    .brand-logo {
+        width: 115px;
+        height: 37px;
+        margin-top: 20px;
+    }
+    
+    .icons>i {
+        background: transparent;
+        color: var(--primary-color);
+        border-radius: 100%;
+        border: 1px solid var(--primary-color);
+        padding: 10px;
+        font-size: 18px;
+    }
+    
+    .icons {
+        display: flex;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.5rem;
+        margin: 1rem;
+        position: relative; 
+    }
+    
+    .heading {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 30%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 790;
+        font-size: 13vw;
+        display: flex;
+        justify-content: center;
+        line-height: 228px;
+        opacity: 0.5;
+        -webkit-text-stroke: 5px var(--secondary-color);
+    }
+    
+    .heading2 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 46%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 750;
+        font-size: 2.5vw;
+        text-align: center;
+        color: var(--light-color);
+    }
+    
+    .sub-title {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 54%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5vw;
+        line-height: 30px;
+        text-align: center;
+        color: var(--light-color);
+    }
+    
+    #clockdiv {
+        position: absolute;
+        font-family: 'Catamaran', sans-serif;
+        color: var(--light-color);
+        display: inline;
+        text-align: center;
+        font-size: 3.5vh;
+        top: 70%;
+        color: var(--light-color);
+    }
+    
+    #clockdiv>div {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, .2);
+        display: inline-block;
+    }
+    
+    #clockdiv div>span {
+        padding: 5px;
+        border-radius: 3px;
+        display: inline;
+        font-weight: bold;
+    }
+    
+    .smalltext {
+        padding-top: 2px;
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
-
-.icons>i {
-    background: transparent;
-    color: var(--primary-color);
-    border-radius: 100%;
-    border: 1px solid var(--primary-color);
-    padding: 10px;
-    font-size: 18px;
-}
-
-.icons {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.5rem;
-    margin: 1rem;
-}
-
-.heading {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 30%;
-    font-family: 'Catamaran', sans-serif;
-    font-style: normal;
-    font-weight: 790;
-    font-size: 13vw;
-    margin-left: 4rem;
-    line-height: 228px;
-    opacity: 0.5;
-    -webkit-text-stroke: 5px var(--secondary-color);
-}
-
-.heading2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 47%;
-    font-family: 'Catamaran', sans-serif;
-    font-style: normal;
-    font-weight: 750;
-    font-size: 2.5vw;
-    text-align: center;
-    color: var(--light-color);
-}
-
-.sub-title {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    top: 54%;
-    font-family: 'Catamaran', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5vw;
-    line-height: 27px;
-    text-align: center;
-    color: var(--light-color);
-}
-
-#clockdiv {
-    position: absolute;
-    font-family: 'Catamaran', sans-serif;
-    color: var(--light-color);
-    display: inline;
-    text-align: center;
-    font-size: 3.5vh;
-    top: 70%;
-    color: var(--light-color);
-}
-
-#clockdiv>div {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, .2);
-    display: inline-block;
-}
-
-#clockdiv div>span {
-    padding: 5px;
-    border-radius: 3px;
-    display: inline;
-    font-weight: bold;
-}
-
-.smalltext {
-    padding-top: 2px;
-    font-size: 20px;
-}
-
-
-@media screen and (max-width:360px) {
+/* 2. Mobile Screens */
+@media (max-width:576px) {
     .brand-logo {
         width: 80px;
         height: 20px;
         margin: 15px;
     }
-
     .icons>i {
+        background: transparent;
+        color: var(--primary-color);
+        border-radius: 100%;
+        border: 1px solid var(--primary-color);
         padding: 8px;
         font-size: 12px;
     }
@@ -142,36 +151,76 @@ body {
     }
 
     .heading {
-        font-weight: 800;
-        font-size: 11vw;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 30%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 790;
+        font-size: 13vw;
         line-height: 60px;
-        margin-left: 2rem;
+        display: flex;
+        justify-content: center;
+        opacity: 0.5;
         -webkit-text-stroke: 2px var(--secondary-color);
     }
 
     .heading2 {
         top:34%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 750;
+        font-size: 3vw;
+        text-align: center;
+        color: var(--light-color);
     }
 
     .sub-title {
         top: 40%;
-        font-size: 4vw;
         width: 100%;
+        position: absolute;
+        height: 100%;
+        font-family: 'Catamaran', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4vw;
+        line-height: 30px;
+        text-align: center;
+        color: var(--light-color);
+    }
+
+    #clockdiv {
+        position: absolute;
+        font-family: 'Catamaran', sans-serif;
+        color: var(--light-color);
+        display: inline;
+        text-align: center;
+        font-size: 4vh;
+        top: 70%;
+        color: var(--light-color);
     }
 
     #clockdiv>div {
         padding: 10px;
         border-radius: 5px;
         margin-right: 3px;
+        background-color: rgba(255, 255, 255, .2);
+        display: inline-block;
     }
     
     #clockdiv div>span {
         padding: 5px;
         border-radius: 3px;
+        display: inline;
     }
     
     .smalltext {
         padding-top: 2px;
         font-size: 12px;
+        font-weight: bold;
     }
 }
