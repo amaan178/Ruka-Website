@@ -1,12 +1,11 @@
-var deadline = Date.parse("january 1, 2023 24:00:00");
+var deadline = new Date(Date.UTC(2022, 12, 1, 23));
 var x = setInterval(function () {
-    var now = new Date().getTime();
-    var t = deadline - now;
+    var t = deadline - new Date();
     // console.log(t);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    var seconds = Math.floor( (t/1000) % 60 );
+    var minutes = Math.floor( (t/1000/60) % 60 );
+    var hours = Math.floor( (t/(1000*60*60)) % 24 );
+    var days = Math.floor( t/(1000*60*60*24) );
     document.getElementById("day").innerHTML = days;
     document.getElementById("hour").innerHTML = hours;
     document.getElementById("minute").innerHTML = minutes;
@@ -22,7 +21,7 @@ var x = setInterval(function () {
 
 var HeroSection = document.getElementById("heroSection");
 var iconList = document.getElementById("icons")
-if (screen.width <= 360) {
+if (screen.width <= 576) {
     // console.log(HeroSection);
     //console.log(iconList);
     HeroSection.appendChild(iconList);
