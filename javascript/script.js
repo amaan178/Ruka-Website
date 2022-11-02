@@ -22,8 +22,8 @@ var x = setInterval(function () {
 
 var HeroSection = document.getElementById("heroSection");
 var iconList = document.getElementById("icons")
-if (window.innerWidth <= 360) {
+if (screen.width <= 360) {
     // console.log(HeroSection);
-    // console.log(iconList);
+    //console.log(iconList);
     HeroSection.appendChild(iconList);
 }
